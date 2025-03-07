@@ -21,7 +21,7 @@
       .letter {
         background: #fff
           url("https://www.transparenttextures.com/patterns/paper-fibers.png");
-        padding: 50px;
+        padding: 40px;
         border-radius: 20px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         text-align: center;
@@ -35,17 +35,17 @@
         color: #ff69b4;
         margin-bottom: 20px;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-        font-size: 2em;
+        font-size: 1.8em;
       }
 
       .btn-open {
-        padding: 12px 30px;
+        padding: 10px 25px;
         background: #ff69b4;
         color: white;
         border: none;
         border-radius: 25px;
         cursor: pointer;
-        font-size: 18px;
+        font-size: 16px;
         transition: all 0.3s;
         box-shadow: 0 3px 15px rgba(255, 105, 180, 0.5);
       }
@@ -58,12 +58,12 @@
       /* Hiệu ứng trái tim */
       .heart {
         position: absolute;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         background: #ff69b4;
         transform: rotate(-45deg);
         animation: float 5s ease-in-out infinite;
-        box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+        box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
         z-index: 0;
       }
 
@@ -71,18 +71,18 @@
       .heart:after {
         content: "";
         position: absolute;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         background: #ff69b4;
         border-radius: 50%;
       }
 
       .heart:before {
-        top: -12px;
+        top: -10px;
         left: 0;
       }
       .heart:after {
-        left: 12px;
+        left: 10px;
         top: 0;
       }
 
@@ -90,10 +90,6 @@
         0% {
           transform: translateY(0) rotate(-45deg) scale(1);
           opacity: 1;
-        }
-        50% {
-          transform: translateY(-50vh) rotate(-45deg) scale(1.3);
-          opacity: 0.7;
         }
         100% {
           transform: translateY(-100vh) rotate(-45deg) scale(0.5);
@@ -114,12 +110,10 @@
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         z-index: 1000;
         width: 90%;
-        max-width: 500px;
+        max-width: 400px;
         text-align: center;
         border: 3px solid #ff69b4;
         box-sizing: border-box;
-        max-height: 90vh;
-        overflow-y: auto;
       }
 
       /* Container cho nội dung tĩnh */
@@ -130,37 +124,37 @@
 
       .modal h4 {
         color: #ff1493;
-        text-shadow: 2px 2px 5px rgba(255, 20, 147, 0.3);
-        font-size: 1.8em;
+        text-shadow: 1px 1px 3px rgba(255, 20, 147, 0.3);
+        font-size: 1.5em;
         margin: 10px 0;
       }
 
       .modal p {
         color: #444;
-        font-size: 1.1em;
-        line-height: 1.5;
-        margin: 10px 0;
+        font-size: 0.9em;
+        line-height: 1.4;
+        margin: 8px 0;
       }
 
       .modal img {
         width: 100%;
-        max-width: 250px;
+        max-width: 200px;
         height: auto;
-        margin: 20px 0;
+        margin: 15px 0;
         border-radius: 15px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         border: 2px solid #ffd1dc;
       }
 
       .btn-back {
-        padding: 10px 25px;
+        padding: 8px 20px;
         background: #ff69b4;
         color: white;
         border: none;
         border-radius: 20px;
         cursor: pointer;
-        font-size: 16px;
-        margin-top: 20px;
+        font-size: 14px;
+        margin-top: 15px;
         transition: all 0.3s;
       }
 
@@ -172,111 +166,25 @@
       /* Hiệu ứng hoa */
       .flower {
         position: absolute;
-        font-size: 50px;
-        animation: spin 2.5s linear infinite;
+        font-size: 40px;
         z-index: 1;
       }
 
       .flower.left-top {
-        left: -70px;
+        left: -50px;
         top: 5%;
       }
       .flower.right-top {
-        right: -70px;
+        right: -50px;
         top: 5%;
       }
       .flower.left-bottom {
-        left: -70px;
+        left: -50px;
         bottom: 5%;
       }
       .flower.right-bottom {
-        right: -70px;
+        right: -50px;
         bottom: 5%;
-      }
-
-      @keyframes spin {
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      /* Hiệu ứng pháo hoa */
-      .firework {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background: #ff1493;
-        border-radius: 50%;
-        box-shadow: 0 0 15px rgba(255, 20, 147, 0.8);
-        animation: firework 1.5s ease-out;
-        z-index: 1;
-      }
-
-      @keyframes firework {
-        0% {
-          transform: scale(0) rotate(0deg);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(4) rotate(45deg);
-          opacity: 0;
-        }
-      }
-
-      /* Hiệu ứng ngôi sao */
-      .star {
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        background: #ffd700;
-        clip-path: polygon(
-          50% 0%,
-          61% 35%,
-          98% 35%,
-          68% 57%,
-          79% 91%,
-          50% 70%,
-          21% 91%,
-          32% 57%,
-          2% 35%,
-          39% 35%
-        );
-        animation: twinkle 2s infinite;
-        z-index: 1;
-      }
-
-      @keyframes twinkle {
-        0%,
-        100% {
-          opacity: 0.3;
-          transform: scale(0.8);
-        }
-        50% {
-          opacity: 1;
-          transform: scale(1.3);
-        }
-      }
-
-      /* Hiệu ứng bong bóng */
-      .bubble {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background: rgba(255, 182, 193, 0.5);
-        border-radius: 50%;
-        animation: bubbleFloat 4s ease-in-out infinite;
-        z-index: 0;
-      }
-
-      @keyframes bubbleFloat {
-        0% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(-100vh);
-          opacity: 0;
-        }
       }
 
       /* Tối ưu cho điện thoại */
@@ -286,56 +194,54 @@
         }
 
         .letter h1 {
-          font-size: 1.5em;
-        }
-
-        .btn-open {
-          padding: 10px 20px;
-          font-size: 16px;
-        }
-
-        .modal {
-          padding: 15px;
-          width: 85%;
-          max-height: 85vh;
-        }
-
-        .modal h4 {
           font-size: 1.4em;
         }
 
-        .modal p {
-          font-size: 1em;
-        }
-
-        .modal img {
-          max-width: 200px;
-        }
-
-        .btn-back {
+        .btn-open {
           padding: 8px 20px;
           font-size: 14px;
         }
 
+        .modal {
+          padding: 15px;
+          max-width: 320px;
+        }
+
+        .modal h4 {
+          font-size: 1.2em;
+        }
+
+        .modal p {
+          font-size: 0.8em;
+        }
+
+        .modal img {
+          max-width: 180px;
+        }
+
+        .btn-back {
+          padding: 6px 15px;
+          font-size: 12px;
+        }
+
         .flower {
-          font-size: 30px;
+          font-size: 25px;
         }
 
         .flower.left-top {
-          left: -40px;
+          left: -30px;
         }
         .flower.right-top {
-          right: -40px;
+          right: -30px;
         }
         .flower.left-bottom {
-          left: -40px;
+          left: -30px;
         }
         .flower.right-bottom {
-          right: -40px;
+          right: -30px;
         }
 
-        .heart,
-        .bubble {
+        .heart {
           width: 15px;
           height: 15px;
         }
@@ -392,52 +298,14 @@
         document.body.appendChild(heart);
         setTimeout(() => heart.remove(), 5000);
       }
-      setInterval(createHeart, 150);
-
-      // Tạo hiệu ứng pháo hoa
-      function createFirework() {
-        const modal = document.getElementById("modal");
-        const firework = document.createElement("div");
-        firework.className = "firework";
-        firework.style.left = Math.random() * modal.offsetWidth + "px";
-        firework.style.top = Math.random() * modal.offsetHeight + "px";
-        firework.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        modal.appendChild(firework);
-        setTimeout(() => firework.remove(), 1500);
-      }
-
-      // Tạo hiệu ứng ngôi sao
-      function createStar() {
-        const modal = document.getElementById("modal");
-        const star = document.createElement("div");
-        star.className = "star";
-        star.style.left = Math.random() * modal.offsetWidth + "px";
-        star.style.top = Math.random() * modal.offsetHeight + "px";
-        modal.appendChild(star);
-        setTimeout(() => star.remove(), 2000);
-      }
-
-      // Tạo hiệu ứng bong bóng
-      function createBubble() {
-        const bubble = document.createElement("div");
-        bubble.className = "bubble";
-        bubble.style.left = Math.random() * 100 + "vw";
-        bubble.style.width = bubble.style.height =
-          Math.random() * 20 + 10 + "px";
-        document.body.appendChild(bubble);
-        setTimeout(() => bubble.remove(), 4000);
-      }
-      setInterval(createBubble, 300);
+      setInterval(createHeart, 500); // Giảm tần suất để nhẹ hơn
 
       // Mở modal
-      let fireworkInterval, starInterval;
       function openModal() {
         const letter = document.getElementById("letter");
         const modal = document.getElementById("modal");
         letter.style.display = "none";
         modal.style.display = "block";
-        fireworkInterval = setInterval(createFirework, 150);
-        starInterval = setInterval(createStar, 250);
       }
 
       // Đóng modal
@@ -446,8 +314,6 @@
         const modal = document.getElementById("modal");
         modal.style.display = "none";
         letter.style.display = "block";
-        clearInterval(fireworkInterval);
-        clearInterval(starInterval);
       }
     </script>
   </body>
