@@ -104,15 +104,15 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: linear-gradient(45deg, #fff0f5, #ffe4e1, #fff5f5);
+        background: #fff0f5;
         padding: 20px;
-        border-radius: 25px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         z-index: 1000;
         width: 90%;
-        max-width: 400px;
+        max-width: 350px;
         text-align: center;
-        border: 3px solid #ff69b4;
+        border: 2px solid #ff69b4;
         box-sizing: border-box;
       }
 
@@ -120,13 +120,17 @@
       .modal-content {
         position: relative;
         z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .modal h4 {
         color: #ff1493;
-        text-shadow: 1px 1px 3px rgba(255, 20, 147, 0.3);
-        font-size: 1.5em;
+        font-size: 1.4em;
         margin: 10px 0;
+        font-weight: bold;
       }
 
       .modal p {
@@ -134,6 +138,12 @@
         font-size: 0.9em;
         line-height: 1.4;
         margin: 8px 0;
+        max-width: 90%;
+      }
+
+      .modal p span {
+        color: #ff1493;
+        font-weight: bold;
       }
 
       .modal img {
@@ -141,9 +151,8 @@
         max-width: 200px;
         height: auto;
         margin: 15px 0;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-        border: 2px solid #ffd1dc;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
       }
 
       .btn-back {
@@ -156,6 +165,7 @@
         font-size: 14px;
         margin-top: 15px;
         transition: all 0.3s;
+        text-transform: uppercase;
       }
 
       .btn-back:hover {
@@ -163,28 +173,72 @@
         transform: scale(1.05);
       }
 
-      /* Hiệu ứng hoa */
-      .flower {
+      /* Trang trí tĩnh */
+      .heart-decor {
         position: absolute;
-        font-size: 40px;
+        color: #ff69b4;
+        font-size: 20px;
         z-index: 1;
       }
 
-      .flower.left-top {
-        left: -50px;
-        top: 5%;
+      .heart-decor.top-left {
+        top: 10px;
+        left: 10px;
       }
-      .flower.right-top {
-        right: -50px;
-        top: 5%;
+      .heart-decor.top-right {
+        top: 10px;
+        right: 10px;
       }
-      .flower.left-bottom {
-        left: -50px;
-        bottom: 5%;
+      .heart-decor.bottom-left {
+        bottom: 10px;
+        left: 10px;
       }
-      .flower.right-bottom {
-        right: -50px;
-        bottom: 5%;
+      .heart-decor.bottom-right {
+        bottom: 10px;
+        right: 10px;
+      }
+
+      .star-decor {
+        position: absolute;
+        color: #ffd700;
+        font-size: 20px;
+        z-index: 1;
+      }
+
+      .star-decor.top-right {
+        top: 30px;
+        right: 30px;
+      }
+      .star-decor.bottom-right {
+        bottom: 30px;
+        right: 30px;
+      }
+      .star-decor.bottom-left {
+        bottom: 30px;
+        left: 30px;
+      }
+
+      .circle-decor {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .circle-decor.yellow {
+        background: #ffd700;
+      }
+      .circle-decor.white {
+        background: rgba(255, 255, 255, 0.5);
+      }
+      .circle-decor.top-right {
+        top: 50px;
+        right: 20px;
+      }
+      .circle-decor.bottom-left {
+        bottom: 50px;
+        left: 20px;
       }
 
       /* Tối ưu cho điện thoại */
@@ -204,7 +258,7 @@
 
         .modal {
           padding: 15px;
-          max-width: 320px;
+          max-width: 300px;
         }
 
         .modal h4 {
@@ -212,7 +266,7 @@
         }
 
         .modal p {
-          font-size: 0.8em;
+          font-size: 0.85em;
         }
 
         .modal img {
@@ -224,21 +278,14 @@
           font-size: 12px;
         }
 
-        .flower {
-          font-size: 25px;
+        .heart-decor,
+        .star-decor {
+          font-size: 15px;
         }
 
-        .flower.left-top {
-          left: -30px;
-        }
-        .flower.right-top {
-          right: -30px;
-        }
-        .flower.left-bottom {
-          left: -30px;
-        }
-        .flower.right-bottom {
-          right: -30px;
+        .circle-decor {
+          width: 15px;
+          height: 15px;
         }
 
         .heart {
@@ -271,21 +318,29 @@
       <div class="modal-content">
         <h4>Chúc Thanh Hằng 8/3 Vui Vẻ!</h4>
         <p>
-          Chúc Thanh Hằng học tập thật tốt, luôn đạt thành tích cao và tự tin
-          trong mọi thử thách.
+          Chúc Thanh Hằng <span>học tập thật tốt</span>, luôn đạt thành tích cao
+          và tự tin trong mọi thử thách.
         </p>
-        <p>Sức khỏe dồi dào, lúc nào cũng tràn đầy năng lượng tích cực nhé!</p>
-        <p>Nhan sắc ngày càng xinh đẹp, luôn rạng rỡ.</p>
+        <p>
+          <span>Sức khỏe dồi dào</span>, lúc nào cũng tràn đầy năng lượng tích
+          cực nhé!
+        </p>
+        <p><span>Nhan sắc ngày càng xinh đẹp</span>, luôn rạng rỡ.</p>
         <p>
           Mong mọi điều tốt lành sẽ đến với Thanh Hằng trong ngày đặc biệt này!
         </p>
         <img src="img/image.png" alt="Hoa 8/3" />
         <button class="btn-back" onclick="closeModal()">Quay Lại</button>
       </div>
-      <div class="flower left-top">🌸</div>
-      <div class="flower right-top">🌺</div>
-      <div class="flower left-bottom">🌷</div>
-      <div class="flower right-bottom">💐</div>
+      <div class="heart-decor top-left">💖</div>
+      <div class="heart-decor top-right">💖</div>
+      <div class="heart-decor bottom-left">💖</div>
+      <div class="heart-decor bottom-right">💖</div>
+      <div class="star-decor top-right">✨</div>
+      <div class="star-decor bottom-right">✨</div>
+      <div class="star-decor bottom-left">✨</div>
+      <div class="circle-decor yellow top-right"></div>
+      <div class="circle-decor white bottom-left"></div>
     </div>
 
     <script>
@@ -298,7 +353,7 @@
         document.body.appendChild(heart);
         setTimeout(() => heart.remove(), 5000);
       }
-      setInterval(createHeart, 500); // Giảm tần suất để nhẹ hơn
+      setInterval(createHeart, 500);
 
       // Mở modal
       function openModal() {
